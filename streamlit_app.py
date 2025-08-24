@@ -14,20 +14,18 @@ def get_clean_data():
     return df
 
 def add_sidebar():
-    st.sidebar.header('Cell Nuclei Details')
+    st.sidebar.header('Features')
     df = get_clean_data()
     
     slider_labels = [
-        ('texture(worst)','texture_worst'),
-        ('texture(se)','texture_se'),
-        ('texture(mean)','texture_mean'),
-        ('symmetry(worst)','symmetry_worst'), 
-        ('symmetry(se)','symmetry_se'),
-        ('symmetry(mean)','symmetry_mean'),
-        ('smoothness(worst)','smoothness_worst'),
-        ('radius(worst)','radius_worst'),
-        ('smoothness(se)','smoothness_se'),
-        ('smoothness(mean)','smoothness_mean')]
+        ('Hours Studied(Hs)','Hours Studied'),
+        ('Previous Scores(Ts)','Previous Scores'),
+        ('Sleep Hours(Sh)','Sleep Hours'),
+        ('Sample Question(Sq)','Sample Question'), 
+        ('Papers Practiced(PP)','Papers Practiced')]
+        
+
+ 
 
     
     input_dict ={}
@@ -57,21 +55,22 @@ def get_radar_chart(input_data):
   
   input_data = get_scaled_values(input_data)
   
-  features = ['texture worst','texture_mean','texture_se',
-              'symmetry_worst','symmetry_se','symmetry_mean',
-              'smoothness_worst','radius_worst','smoothness_se',
-              'smoothness_mean']
+  features = ['Hours Studied','Previous Scores','Sleep Hours','Sample Question',
+              'Papers Practiced']
+              
+	
+             
+              
 
   fig = go.Figure()
-
+		
 
   fig.add_trace(go.Scatterpolar(
         r=[
-          input_data['texture_worst'], input_data['texture_se'],input_data['texture_mean'],
-          input_data['symmetry_worst'], input_data['symmetry_se'], input_data['symmetry_mean'],
-          input_data['smoothness_worst'], input_data['radius_worst'], input_data['smoothness_se'],
-          input_data['smoothness_mean']
-        ],
+          input_data['Hours Studied'], input_data['Previous Scores'],input_data['Sleep Hours'],
+          input_data['Sample Question'], input_data['Papers Practiced']]
+         
+        
         theta=features,
         fill='toself',
         name='Mean Value'
@@ -95,7 +94,7 @@ def train_model():
     y = df['diagnosis']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    model = LogisticRegression(max_iter=1000)
+    model = LinearRegression(max_iter=1000)
     model.fit(X_train, y_train)
     
     return model
