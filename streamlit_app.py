@@ -90,8 +90,8 @@ def get_radar_chart(input_data):
 
 def train_model():
     df = get_clean_data()
-    X = df.drop(['diagnosis'], axis=1)
-    y = df['diagnosis']
+    X = df.drop(['Performance Index'], axis=1)
+    y = df['Performance Index']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     model = LinearRegression(max_iter=1000)
