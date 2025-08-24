@@ -46,5 +46,3 @@ def main():
         st.success(f"📊 Your Predicted Performance Score is: {prediction[0][0]:.2f}")
 if __name__ == "__main__":
     main()
-
-['Hours Studied','Previous Scores', 'Sleep Hours', 'Sample Question Papers Practiced', 'Extracurricular Activities
