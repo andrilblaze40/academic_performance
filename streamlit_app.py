@@ -30,18 +30,21 @@ def main():
     st.write("Fill in the details to predict your academic performance score")
     hour_studied = st.number_input("Hours Studied", min_value=1, max_value=10, value=5)
     previous_score = st.number_input("Previous Score", min_value=40, max_value=100, value=70)
-    extra = st.selectbox("Extracurricular Activities", ["Yes", "No"])
     sleeping_hour = st.number_input("Sleeping Hours", min_value=4, max_value=10, value=7)
-    number_of_paper_solved = st.number_input("Question Papers Practiced", min_value=0, max_value=10, value=5)
+    number_of_paper_solved = st.number_input("Sample Question Papers Practiced", min_value=0, max_value=10, value=5)
+    extra = st.selectbox("Extracurricular Activities", ["Yes", "No"])
+   
     if st.button("Predict Your Score"):
         user_data = {
             "Hours Studied": hour_studied,
             "Previous Scores": previous_score,
-            "Extracurricular Activities": extra,
             "Sleep Hours": sleeping_hour,
-            "Sample Question Papers Practiced": number_of_paper_solved
+            "Sample Question Papers Practiced'": number_of_paper_solved,
+            "Extracurricular Activities": extra
         }
         prediction = predict_data(user_data)
         st.success(f"📊 Your Predicted Performance Score is: {prediction[0][0]:.2f}")
 if __name__ == "__main__":
     main()
+
+['Hours Studied','Previous Scores', 'Sleep Hours', 'Sample Question Papers Practiced', 'Extracurricular Activities
