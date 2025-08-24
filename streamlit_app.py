@@ -41,7 +41,7 @@ def main():
     if st.button("Predict Your Score"):
         user_data = {
             "Hours Studied": hour_studied,
-            "Previous Scores": previous_score,j
+            "Previous Scores": previous_score,
             "Sleep Hours": sleeping_hour,
             "Sample Question Papers Practiced": number_of_paper_solved,
             "Extracurricular Activities": extra
