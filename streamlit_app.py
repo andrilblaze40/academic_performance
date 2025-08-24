@@ -2,7 +2,7 @@ import streamlit as st
 import pickle as pickle
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression, LinearRegression
+from sklearn.linear_model import LinearRegression
 from sklearn.metrics import accuracy_score, classification_report
 import pandas as pd
 import plotly.graph_objects as go
