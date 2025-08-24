@@ -1,9 +1,7 @@
-# 📦 Streamlit App Starter Kit 
-```
-⬆️ ACADEMIC PERFORMANCE PREDICTION APP
-```
+📦 ACADEMIC PERFORMANCE PREDICTION APP
 
-Description of the app ...
+
+
 
 MACHINE LEARNING PIPELINE
 
