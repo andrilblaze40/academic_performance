@@ -74,7 +74,7 @@ def get_radar_chart(input_data):
         theta=features,
         fill='toself',
         name='Mean Value'
-  ))
+  )
  
 
   fig.update_layout(
