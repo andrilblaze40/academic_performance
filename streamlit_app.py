@@ -21,8 +21,8 @@ def add_sidebar():
         ('Hours Studied(Hs)','Hours Studied'),
         ('Previous Scores(Ts)','Previous Scores'),
         ('Sleep Hours(Sh)','Sleep Hours'),
-        ('Sample Question(Sq)','Sample Question'), 
-        ('Papers Practiced(PP)','Papers Practiced')]
+        ('Sample Question Papers Practiced(Sq)','Sample Question Papers Practiced')] 
+        
         
 
  
@@ -55,8 +55,8 @@ def get_radar_chart(input_data):
   
   input_data = get_scaled_values(input_data)
   
-  features = ['Hours Studied','Previous Scores','Sleep Hours','Sample Question',
-              'Papers Practiced']
+  features = ['Hours Studied','Previous Scores','Sleep Hours','Sample Question' Papers Practiced']
+              
               
 	
              
@@ -68,7 +68,7 @@ def get_radar_chart(input_data):
   fig.add_trace(go.Scatterpolar(
         r=[
           input_data['Hours Studied'], input_data['Previous Scores'], input_data['Sleep Hours'],
-          input_data['Sample Question'], input_data['Papers Practiced']],
+          input_data['Sample Question Papers Practiced']],
          
         
         theta=features,
