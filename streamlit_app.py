@@ -55,7 +55,7 @@ def get_radar_chart(input_data):
   
   input_data = get_scaled_values(input_data)
   
-  features = ['Hours Studied','Previous Scores','Sleep Hours','Sample Question' Papers Practiced']
+  features = ['Hours Studied','Previous Scores','Sleep Hours','Sample Question Papers Practiced']
               
               
 	
