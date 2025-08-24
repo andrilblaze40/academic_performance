@@ -68,7 +68,7 @@ def get_radar_chart(input_data):
   fig.add_trace(go.Scatterpolar(
         r=[
           input_data['Hours Studied'], input_data['Previous Scores'],input_data['Sleep Hours'],
-          input_data['Sample Question'], input_data['Papers Practiced']]
+          input_data['Sample Question'],input_data['Papers Practiced']]
          
         
         theta=features,
@@ -106,7 +106,7 @@ def add_predictions(input_data):
     scaled_input = np.array(list(input_data.values())).reshape(1, -1)
     prediction = model.predict(scaled_input)
 
-    st.subheader("Cell cluster prediction")
+    st.subheader("Academic Performance prediction")
     if prediction[0] == 0:
         st.write("Benign")
     else:
