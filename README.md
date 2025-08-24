@@ -1,11 +1,11 @@
 # 📦 Streamlit App Starter Kit 
 ```
-⬆️ (Replace above with your app's name)
+⬆️ ACADEMIC PERFORMANCE PREDICTION APP
 ```
 
 Description of the app ...
 
-## Demo App
+MACHINE LEARNING PIPELINE
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://academic_performance.streamlit.app/)
 
