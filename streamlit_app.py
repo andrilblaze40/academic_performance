@@ -34,10 +34,14 @@ def main():
     number_of_paper_solved = st.number_input("Sample Question Papers Practiced", min_value=0, max_value=10, value=5)
     extra = st.selectbox("Extracurricular Activities", ["Yes", "No"])
    
+    st.title("🎓 Data")
+    st.write("Data frame")
+    df_transformed
+   
     if st.button("Predict Your Score"):
         user_data = {
             "Hours Studied": hour_studied,
-            "Previous Scores": previous_score,
+            "Previous Scores": previous_score,j
             "Sleep Hours": sleeping_hour,
             "Sample Question Papers Practiced": number_of_paper_solved,
             "Extracurricular Activities": extra
