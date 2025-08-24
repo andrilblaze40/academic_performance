@@ -1,6 +1,6 @@
 streamlit>=1.26.0
 pandas
-numpy=2.0.0
+numpy<=2.0.0
 scikit-learn
 plotly
 statsmodels
