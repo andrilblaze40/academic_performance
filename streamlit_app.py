@@ -14,7 +14,7 @@ def load_model():
     return model, scaler, le
 # Prepare user input
 def preprocessing_input_data(data, scaler, le):
-   # data['Extracurricular Activities'] = le.transform([data['Extracurricular Activities']])
+    data['Extracurricular Activities'] = le.transform([data['Extracurricular Activities']])
     df = pd.DataFrame([data])
     df_transformed = scaler.transform(df)
     return df_transformed
