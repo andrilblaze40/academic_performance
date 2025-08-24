@@ -67,8 +67,8 @@ def get_radar_chart(input_data):
 
   fig.add_trace(go.Scatterpolar(
         r=[
-          input_data['Hours Studied'], input_data['Previous Scores'],input_data['Sleep Hours'],
-          input_data['Sample Question'],input_data['Papers Practiced']],
+          input_data['Hours Studied'], input_data['Previous Scores'], input_data['Sleep Hours'],
+          input_data['Sample Question'], input_data['Papers Practiced']],
          
         
         theta=features,
