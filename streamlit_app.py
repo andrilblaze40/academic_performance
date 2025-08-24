@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 # Load model, scaler, and encoder
 def load_model():
-    with open("student_lr_final_model.pkl", "rb") as file:
+    with open("performance_lr_final_model.pkl", "rb") as file:
         model, scaler, le = pickle.load(file)
     return model, scaler, le
 # Prepare user input
