@@ -10,8 +10,7 @@ import numpy as np
 from sklearn.metrics import ConfusionMatrixDisplay, RocCurveDisplay, PrecisionRecallDisplay
 from sklearn.metrics import precision_score, recall_score
 def get_clean_data():
-    df= pd.read_csv("cleaned_breast_cancer_data.csv")
-    df['diagnosis'].replace({'M':1,'B':0},inplace=True)
+    df= pd.read_csv("Academic_Performance_data.csv")
     return df
 
 def add_sidebar():
